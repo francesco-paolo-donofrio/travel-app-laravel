@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
+            $table->string('slug')->unique();
+            $table->string('title, 255');
+            $table->text('description');
             $table->date('date');
-            $table->rating(1, 5);
+            $table->smallInteger('rating');
             $table->timestamps();
         });
     }
