@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TravelController;
-use App\Http\Controllers\DayController;
+use App\Http\Controllers\Admin\DayController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -36,7 +36,6 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     Route::post('/day', [DayController::class, 'store'])->name('days.store');
     Route::put('/day/{day}', [DayController::class, 'update'])->name('days.update');
     Route::delete('/day/{day}', [DayController::class, 'destroy'])->name('days.destroy');
-    //Route::resource('comics', ComicController::class);
 });
 
 
