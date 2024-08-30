@@ -15,4 +15,9 @@ class Travel extends Model
         'date',
         'rating',
     ];
+
+    public function days()
+    {
+        return $this->belongsToMany(Day::class);
+    }
 }

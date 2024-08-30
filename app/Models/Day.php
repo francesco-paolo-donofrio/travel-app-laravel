@@ -17,4 +17,9 @@ class Day extends Model
         'curiosity',
         'totalSpent',
     ];
+
+    public function travel()
+    {
+        return $this->hasOne(Travel::class);
+    }
 }
