@@ -16,5 +16,6 @@ class DayController extends Controller
             'message' => 'Ok',
             'results' => $types
         ], 200);
+        
     }
 }
